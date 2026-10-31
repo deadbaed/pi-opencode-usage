@@ -34,8 +34,10 @@ $ pi
 
 ## Install
 
+With NodeJS installed (I tested with NodeJS 24):
+
 ```shell
-pi install git:github.com/deadbaed/pi-opencode-usage
+pi install https://github.com/deadbaed/pi-opencode-usage
 ```
 
 ## Usage
@@ -59,9 +61,34 @@ The selected style is stored in `~/.pi/agent/pi-opencode-usage.json`.
 
 I use [pi-footer](https://github.com/wobondar/pi-footer) as my footer. When customizing the footer (with `/footer` inside pi), you can add the `Extension Status` widget in your lines. The usage status will be shown automatically.
 
+Here's how my footer looks with the usage on the last line:
+
+```shell
+$ pi
+
+ ▀▀█  v1.3.0
+ █▀ █ escape interrupt · ctrl+c/ctrl+d clear/exit · / commands · ! bash · ctrl+o more
+ Press ctrl+o to show full startup help and loaded resources.
+
+ Pi can explain its own features and look up its docs. Ask it how to use or extend Pi.
+
+[Extensions]
+  pi-footer/src, pi-notify, pi-opencode-usage/src, pi-wakatime/src
+
+
+─────────────────────────────────────────────────────────────────────────────────────
+
+─────────────────────────────────────────────────────────────────────────────────────
+
+model opencode-go/kimi-k2.7-code • cost $0.0646 • thinking high
+ctx len 19.8k • ctx 7.6% • tok 141.1k • tok/min 50k/min
+tools 4 • cwd ~/src/pi-opencode-usage
+opencode rolling:1% ↻ 3h44m · weekly:25% ↻ 1d7h · monthly:12% ↻ 29d3h
+```
+
 ## Local development
 
-With Node.js installed:
+With NodeJS installed (I tested with NodeJS 24):
 
 ```shell
 npm install
